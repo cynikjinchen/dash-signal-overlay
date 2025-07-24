@@ -47,7 +47,7 @@ volume_indicators = ["佳庆指标", "波动趋势"]
 
 # ========== 初始化 Dash App ==========
 app = Dash(__name__)
-
+server = app.server  # 这行加在`app = Dash(__name__)`之后
 # ========== 工具函数 ==========
 def add_reference_lines(fig, dff, show_ref, yaxis_id='y3'):
     def normalize(series):
@@ -789,7 +789,7 @@ def update_heatmap(selected_brokers, selected_year, selected_long_short, selecte
 #     fig.update_layout(title="各信号对加/减仓的解释强度（平均SHAP值）", height=800)
 #     return fig
 
-server = app.server  # 这行加在`app = Dash(__name__)`之后
+
 
 if __name__ == '__main__':
     app.run(debug=True)
