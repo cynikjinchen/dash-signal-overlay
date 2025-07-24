@@ -789,7 +789,6 @@ def update_heatmap(selected_brokers, selected_year, selected_long_short, selecte
 #     fig.update_layout(title="各信号对加/减仓的解释强度（平均SHAP值）", height=800)
 #     return fig
 
-app = Dash(__name__)  # 这是Dash应用的初始化
 server = app.server  # 这行加在`app = Dash(__name__)`之后
 
 if __name__ == '__main__':
